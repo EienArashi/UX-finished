@@ -1,0 +1,295 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*css*/
+#slider {                     /*selve slider*/
+    width: 720px;
+    height: 400px;
+    overflow: hidden;
+    margin-left:350px;
+}
+
+#slider .slides {              /*selve slidesne*/
+    display: block;
+    width: 6000px;
+    height: 400px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#slider .slide {              /*hvordan img slider*/
+    float: left;
+    list-style-type: none;
+    width: 720px;
+    height: 400px;
+}
+.text-muted{
+  text-align: center;
+  font-size: 30px;
+}
+
+.slide1 {background: white;}  /*slider baggrundsfarve*/
+.slide2 {background: white;}
+.slide3 {background: white;}
+.slide4 {background: white;}
+.slide5 {background: white;}
+
+
+/*Til at ændre tekst over "netflix slider"*/
+p{
+  font-size: 30px;
+  text-align: center;
+}
+.netflixslide {
+  width: 100%;
+  margin-bottom: 20px;
+
+}
+/*Er scrollbaren under, y= at man ikke har en scroll mulighed i venstre side*/
+.row {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 100%;
+  /*background-color: black;*/
+}
+/*Får det til at være i en linje*/
+.row__inner {
+  white-space: nowrap;
+  margin: 30px 10px;
+}
+
+.tile {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  height: 140px;
+  margin-right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  /*giver en mere glidende effect på hover*/
+  -webkit-transition: 450ms all;
+  transition: 450ms all;
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+}
+/*Billed størrelsen i netflix slideren*/
+.tile__img {
+  width: 250px;
+  height: 140px;
+  /*gør at billderne holder deres form*/
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/*Skriften på billedet*/
+.tile__title {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  color: green;
+  background-color: lightgrey;
+  font-size: 18px;
+
+}
+/*opacity på de andre billeder når man hover over et*/
+.row__inner:hover .tile {
+  opacity: 0.5;
+}
+/* får det til at hoppe ud i stedet for at slide til siden*/
+.row__inner:hover .tile:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+/*fremhæver hvilket billed du er på*/
+  opacity: 1;
+}
+/*Gør så når man hover over et billed at man ikke kan se de andre i baggrunden af billedet men ved siden af*/
+.tile:hover ~ .tile {
+  -webkit-transform: translate3d(125px, 0, 0);
+          transform: translate3d(125px, 0, 0);
+}
+
+
+
+/* footer */
+
+footer {
+  width: 100%;
+  background-color: #eee;
+  padding: 50px 0px;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+}
+
+ul{
+  list-style: none;
+  font-size: 16px;
+}
+
+h1{
+  font-size: 26px;
+}
+
+.regler{
+  text-decoration: none;
+  color: black;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.ikon{
+  font-size: 30px;
+}
+
+
+/* Nav kode... håber ikke det hele går galt...*/
+body {
+  margin: 0;
+}
+
+.navcolor {
+  background-color: #eee;
+  border: 0px;
+  border-style: solid;
+  min-height: 120px;
+}
+
+.logo {
+  height: 110px;
+  float: left;
+  padding: 4px;
+}
+
+.Icon {
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+}
+
+.topnav {
+  font-family: 'Merriweather', serif;
+  overflow: hidden;
+  float: left;
+  color: #222;
+  text-align: center;
+  width: 13%;
+  padding: 0px 10px 0px 10px;
+  margin: auto;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #aaa;
+  color: black;
+}
+
+
+.searchbar {
+  width: 180px;
+  height: 30px;
+  float: right;
+  padding: 5px;
+  margin: 9px;
+  font-size: 17px;
+}
+
+.dropdown {
+  float: right;
+}
+
+.dropbtn {
+  display: inline-block;
+  cursor: pointer;
+  margin: 3px;
+  border: none;
+  background-color: #eee;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #000;
+  margin: 6px 0;
+  transition: 0.4s;
+  user-select: none; /* Standard syntax */
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  float: right;
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ddd;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 8px 14px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #aaa}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+@media screen and (max-width: 420px) {
+  .Icon {display: none;}
+  .logo {height: 50px;
+         padding: 4px;
+        }
+  .topnav, br {display: none;}
+  .navcolor {min-height: 50px}
+  .searchbar {width: 150px;}
+  .container {display: none;}
+
+h1{
+  font-size: 16px;
+}
+
+.ikon{
+  font-size: 32px;
+  }
+}
+@media screen and (min-width: 420px) {
+.dropbtn {display: none;}
+
+}
